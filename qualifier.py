@@ -78,7 +78,7 @@ class Article:
         return self.content[0:cutoff]
 
     def most_common_words(self, n_words: int):
-        words = re.findall('[a-z0-9]+', self.content.lower())
+        words = re.findall('[a-z]+', self.content.lower())
         wordcount = {}
         for word in words:
             # Updating an OrderedDict does not change order
